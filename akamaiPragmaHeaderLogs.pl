@@ -27,15 +27,15 @@ while ($line=<HEADERS>) {
 			$AKAMAI_INFO{$req}{'EdgeIP'} = "-";
 			$AKAMAI_INFO{$req}{'ParentIP'} = "-";
 			$AKAMAI_INFO{$req}{'Last-Modified'} = "-";
-      $AKAMAI_INFO{$req}{'Cache-Control'} = "-";
-      $AKAMAI_INFO{$req}{'Date'} = "-";
-      $AKAMAI_INFO{$req}{'Akamai-Cache-Key'} = "-";
-      $REQ_INFO{$req}{'reqHeaderSize'} = "-";
-      $REQ_INFO{$req}{'reqCookieSize'} = "-";
-      $REQ_INFO{$req}{'setCookies'} = "-";
-      $REQ_INFO{$req}{'setCookieSize'} = "-";
-      $AKAMAI_INFO{$req}{'Varnish-X-Cahe'} = "-";
-      $fullRequestHeaders="";
+  		        $AKAMAI_INFO{$req}{'Cache-Control'} = "-";
+		        $AKAMAI_INFO{$req}{'Date'} = "-";
+		        $AKAMAI_INFO{$req}{'Akamai-Cache-Key'} = "-";
+		        $REQ_INFO{$req}{'reqHeaderSize'} = "-";
+		        $REQ_INFO{$req}{'reqCookieSize'} = "-";
+		        $REQ_INFO{$req}{'setCookies'} = "-";
+		        $REQ_INFO{$req}{'setCookieSize'} = "-";
+		        $AKAMAI_INFO{$req}{'Varnish-X-Cache'} = "-";
+		        $fullRequestHeaders="";
 		}
 	}
 		
@@ -61,13 +61,13 @@ while ($line=<HEADERS>) {
 	}
 
 	if ($line =~ /^X-Cache-Remote:/) {
-			@tmp = split / /, $line;
-			$AKAMAI_INFO{$req}{'X-Cache-Remote'} = $tmp[1] if ($tmp[1] ne "");
-      $server=$tmp[3];
-      $server=~ s/.deploy.akamaitechnologies.com//;
-      $server=~ s/^a//;
-      $server=~ s/-/./g;
-      $AKAMAI_INFO{$req}{'ParentIP'} = $server if ($server ne "");
+		      @tmp = split / /, $line;
+		      $AKAMAI_INFO{$req}{'X-Cache-Remote'} = $tmp[1] if ($tmp[1] ne "");
+		      $server=$tmp[3];
+		      $server=~ s/.deploy.akamaitechnologies.com//;
+		      $server=~ s/^a//;
+		      $server=~ s/-/./g;
+		      $AKAMAI_INFO{$req}{'ParentIP'} = $server if ($server ne "");
 	}	
 
 	if ($line =~ /^X-Cache-Key:/) {
