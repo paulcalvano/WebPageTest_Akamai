@@ -1,6 +1,6 @@
 WebPage Test  - Akamai Caching Modifications
 
-The WebPageTest modifications included here were used during the 2015 NYC Velocity Presentation  “Advanced Caching Concepts”, by Paul Calvano and Rakesh Chaudhary (http://www.slideshare.net/RakeshChaudhary4/advanced-caching-concepts-velocity-ny-2015).   The presentation references http://wpt.advancedcaching.org, which currently redirects here since we are no longer hosting this private instance.  Please feel free to reach out to @paulcalvano on Twitter if you have any questions on how to set up and use this on your own private instance.
+The WebPageTest modifications included here were used during the 2015 NYC Velocity Presentation  “Advanced Caching Concepts”, by Paul Calvano and Rakesh Chaudhary (http://www.slideshare.net/RakeshChaudhary4/advanced-caching-concepts-velocity-ny-2015).   The presentation references http://wpt.advancedcaching.org, which currently redirects here since we are no longer hosting this private instance.  Please feel free to reach out to @paulcalvano on Twitter or pacalvan@akamai.com via email if you have any questions on how to set up and use this on your own private instance.
 
 In order to use the code here, you need to first set up a WebPageTest private instance.   The latest WebPageTest distribution is located at https://github.com/WPO-Foundation/webpagetest.  Instructions for installing and setting it up are at https://sites.google.com/a/webpagetest.org/docs/private-instances.    The following instructions assume that you have a private agent set up.
 
